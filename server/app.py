@@ -39,7 +39,12 @@ CORS(app, resources={r'/*': {'origins': '*'}})
 
 
 ############------------ FUNCTION(S) ------------############
-# sanity check route
+# sanity check routes
+@app.route('/', methods=['GET'])
+def home():
+    return '<a href=http://127.0.0.1:5000/ping>http://127.0.0.1:5000/ping</a>'
+
+
 @app.route('/ping', methods=['GET'])
 def ping_pong():
     return jsonify('pong!')
