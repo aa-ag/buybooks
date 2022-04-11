@@ -1,8 +1,10 @@
+############------------ IMPORTS ------------############
 import uuid
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 
 
+############------------ GLOBAL VARIABLE(S) ------------############
 BOOKS = [
     {
         'id': uuid.uuid4().hex,
@@ -36,6 +38,7 @@ app.config.from_object(__name__)
 CORS(app, resources={r'/*': {'origins': '*'}})
 
 
+############------------ FUNCTION(S) ------------############
 # sanity check route
 @app.route('/ping', methods=['GET'])
 def ping_pong():
@@ -86,5 +89,6 @@ def single_book(book_id):
     return jsonify(response_object)
 
 
+############------------ DRIVER CODE ------------############
 if __name__ == '__main__':
     app.run()
