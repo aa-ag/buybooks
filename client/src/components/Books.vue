@@ -25,6 +25,7 @@
                 <span v-if="book.read">Yes</span>
                 <span v-else>No</span>
               </td>
+              <td>${{ book.price }}</td>
               <td>
                 <div class="btn-group" role="group">
                   <button
