@@ -13,6 +13,7 @@
               <th scope="col">Title</th>
               <th scope="col">Author</th>
               <th scope="col">Read?</th>
+              <th scope="col">Purchase Price</th>
               <th></th>
             </tr>
           </thead>
