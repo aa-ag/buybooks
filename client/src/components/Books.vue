@@ -205,6 +205,7 @@ export default {
         title: this.addBookForm.title,
         author: this.addBookForm.author,
         read, // property shorthand
+        price: this.addBook.price,
       };
       this.addBook(payload);
       this.initForm();
