@@ -146,6 +146,7 @@ export default {
         title: '',
         author: '',
         read: [],
+        price: '',
       },
       message: '',
       showMessage: false,
