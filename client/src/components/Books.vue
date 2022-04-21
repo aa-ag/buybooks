@@ -191,6 +191,7 @@ export default {
       this.addBookForm.title = '';
       this.addBookForm.author = '';
       this.addBookForm.read = [];
+      this.addBookForm.price = '';
       this.editForm.id = '';
       this.editForm.title = '';
       this.editForm.author = '';
