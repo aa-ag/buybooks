@@ -73,6 +73,10 @@
                           placeholder="Enter author">
             </b-form-input>
           </b-form-group>
+        <b-form-group id="form-price-group"
+                      label="Purchase price:"
+                      label-for="form-price-input">
+        </b-form-group>
         <b-form-group id="form-read-group">
           <b-form-checkbox-group v-model="addBookForm.read" id="form-checks">
             <b-form-checkbox value="true">Read?</b-form-checkbox>
