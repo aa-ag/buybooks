@@ -165,6 +165,7 @@ export default {
         title: '',
         author: '',
         read: [],
+        price: '',
       },
     };
   },
