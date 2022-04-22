@@ -100,7 +100,7 @@
             title="Update"
             hide-footer>
       <b-form @submit="onSubmitUpdate" @reset="onResetUpdate" class="w-100">
-      <b-form-group id="form-title-edit-group"
+        <b-form-group id="form-title-edit-group"
                     label="Title:"
                     label-for="form-title-edit-input">
           <b-form-input id="form-title-edit-input"
@@ -113,13 +113,17 @@
         <b-form-group id="form-author-edit-group"
                       label="Author:"
                       label-for="form-author-edit-input">
-            <b-form-input id="form-author-edit-input"
-                          type="text"
-                          v-model="editForm.author"
-                          required
-                          placeholder="Enter author">
-            </b-form-input>
-          </b-form-group>
+          <b-form-input id="form-author-edit-input"
+                        type="text"
+                        v-model="editForm.author"
+                        required
+                        placeholder="Enter author">
+          </b-form-input>
+        </b-form-group>
+        <b-form-group id="form-price-edit-group"
+                      label="Purchase price:"
+                      label-for="form-price-edit-input">
+        </b-form-group>
         <b-form-group id="form-read-edit-group">
           <b-form-checkbox-group v-model="editForm.read" id="form-checks">
             <b-form-checkbox value="true">Read?</b-form-checkbox>
