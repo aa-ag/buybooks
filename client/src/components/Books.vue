@@ -239,6 +239,7 @@ export default {
         title: this.editForm.title,
         author: this.editForm.author,
         read,
+        price: this.editForm.price,
       };
       this.updateBook(payload, this.editForm.id);
     },
