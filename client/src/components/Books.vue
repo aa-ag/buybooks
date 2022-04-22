@@ -123,6 +123,12 @@
         <b-form-group id="form-price-edit-group"
                       label="Purchase price:"
                       label-for="form-price-edit-input">
+          <b-form-input id="form-price-edit-input"
+                        type="text"
+                        v-model="editForm.author"
+                        required
+                        placeholder="Enter price">
+          </b-form-input>
         </b-form-group>
         <b-form-group id="form-read-edit-group">
           <b-form-checkbox-group v-model="editForm.read" id="form-checks">
