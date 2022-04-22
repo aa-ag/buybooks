@@ -125,7 +125,7 @@
                       label-for="form-price-edit-input">
           <b-form-input id="form-price-edit-input"
                         type="text"
-                        v-model="editForm.author"
+                        v-model="editForm.price"
                         required
                         placeholder="Enter price">
           </b-form-input>
