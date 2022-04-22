@@ -207,6 +207,7 @@ export default {
       this.editForm.title = '';
       this.editForm.author = '';
       this.editForm.read = [];
+      this.editForm.price = '';
     },
     onSubmit(evt) {
       evt.preventDefault();
