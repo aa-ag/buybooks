@@ -39,6 +39,12 @@ DEBUG = True
 app = Flask(__name__)
 app.config.from_object(__name__)
 
+# configure stripe
+stripe_keys = {
+    'secret_key': os.environ['STRIPE_SECRET_KEY'],
+    'publishable_key': os.environ['STRIPE_PUBLISHABLE_KEY'],
+}
+
 # enable CORS
 CORS(app, resources={r'/*': {'origins': '*'}})
 
