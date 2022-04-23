@@ -205,6 +205,9 @@ export default {
           this.getBooks();
         });
     },
+    purchaseBook(bookId) {
+      console.log(bookId);
+    },
     initForm() {
       this.addBookForm.title = '';
       this.addBookForm.author = '';
