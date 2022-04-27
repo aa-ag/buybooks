@@ -291,6 +291,8 @@ export default {
     onDeleteBook(book) {
       this.removeBook(book.id);
     },
+    getStripePublishableKey() {
+    }
   },
   created() {
     this.getBooks();
