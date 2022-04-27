@@ -292,6 +292,12 @@ export default {
       this.removeBook(book.id);
     },
     getStripePublishableKey() {
+      fetch('http://localhost:5000/config')
+        .then((result) => result.json())
+        .then((data) => {
+          // initialize Stripe.js
+          this.stripe = Stripe(data.publicKey);
+        });
     }
   },
   created() {
