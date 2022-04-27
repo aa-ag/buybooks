@@ -102,6 +102,12 @@ def single_book(book_id):
     return jsonify(response_object)
 
 
+@app.route('/config')
+def get_publishable_key():
+    stripe_config = {'publicKey': stripe_keys['publishable_key']}
+    return jsonify(stripe_config)
+
+
 ############------------ DRIVER CODE ------------############
 if __name__ == '__main__':
     app.run()
