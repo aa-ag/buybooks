@@ -302,6 +302,7 @@ export default {
   },
   created() {
     this.getBooks();
+    this.getStripePublishableKey()
   },
 };
 </script>
