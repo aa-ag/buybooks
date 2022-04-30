@@ -122,6 +122,24 @@ def create_checkout_session():
         for book in BOOKS:
             if book['id'] == data['book_id']:
                 book_to_purchase = book
+
+        # create new checkout session
+        checkout_session = stripe.checkout.Session.create(
+            success_url=domain_url +
+            '/sucess?session_id={CHECKOUT_SESSION_ID}',
+            cancel_url=domain_url + '/canceled',
+            payment_method_types=['card'],
+            mode='payment',
+            line_items=[
+                {
+                    'name': book_to_purchase['title'],
+                    'quantity': 1,
+                    'currency': 'usd',
+                    'amount': round(float(book_to_purchase['price']) * 100)
+                }
+            ]
+        )
+
     except Exception as e:
         return jsonify(error=str(e)), 403
 
