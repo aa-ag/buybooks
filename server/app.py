@@ -108,6 +108,10 @@ def get_publishable_key():
     return jsonify(stripe_config)
 
 
+@app.route('/create-checkout-session', methods=['POST'])
+def create_checkout_session():
+    pass
+
 ############------------ DRIVER CODE ------------############
 if __name__ == '__main__':
     app.run()
