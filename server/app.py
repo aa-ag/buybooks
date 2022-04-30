@@ -111,7 +111,20 @@ def get_publishable_key():
 
 @app.route('/create-checkout-session', methods=['POST'])
 def create_checkout_session():
-    pass
+    domain_url = 'http://localhost:8080'
+
+    try:
+        data = json.loads(request.data)
+
+        # get book
+        book_to_purchase = ''
+
+        for book in BOOKS:
+            if book['id'] == data['book_id']:
+                book_to_purchase = book
+    except Exception as e:
+        return jsonify(error=str(e)), 403
+
 
 ############------------ DRIVER CODE ------------############
 if __name__ == '__main__':
