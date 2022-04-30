@@ -174,6 +174,7 @@ export default {
         read: [],
         price: '',
       },
+      stripe: null,
     };
   },
   components: {
