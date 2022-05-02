@@ -207,7 +207,14 @@ export default {
         });
     },
     purchaseBook(bookId) {
-      console.log(bookId);
+      // get checkout session id
+      fetch('http://localhost:5000/create-checkout-session', {
+        mehotd: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ book_id: bookId }),
+      })
     },
     initForm() {
       this.addBookForm.title = '';
