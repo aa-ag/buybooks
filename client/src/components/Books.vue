@@ -215,6 +215,7 @@ export default {
         },
         body: JSON.stringify({ book_id: bookId }),
       })
+        .then((result) => result.json())
     },
     initForm() {
       this.addBookForm.title = '';
