@@ -216,6 +216,9 @@ export default {
         body: JSON.stringify({ book_id: bookId }),
       })
         .then((result) => result.json())
+        .then((data) => {
+          console.log(data);
+        })
     },
     initForm() {
       this.addBookForm.title = '';
