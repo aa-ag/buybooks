@@ -223,6 +223,9 @@ export default {
             { sessionId: data.sessionId }
           );
         })
+        .then((res) => {
+          console.log(res);
+        });
     },
     initForm() {
       this.addBookForm.title = '';
