@@ -218,6 +218,10 @@ export default {
         .then((result) => result.json())
         .then((data) => {
           console.log(data);
+          // redirect to Stripe checkout
+          return this.stripe.redirectToCheckout(
+            { sessionId: data.sessionId }
+          );
         })
     },
     initForm() {
